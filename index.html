@@ -6,21 +6,22 @@
   <title>NeoVim — Nuit de l’Info 2025</title>
   <style>
     :root {
-      --bg: #0f1222;
-      --panel: #161a31;
-      --panel-2: #1c2040;
-      --text: #e7e9f3;
-      --muted: #b7bdd6;
-      --accent: #7aa2ff;
-      --accent-2: #89f0d0;
-      --radius: 14px;
-      --shadow: 0 10px 30px rgba(0,0,0,0.35);
-    }
+		--bg: #f9f9fb;          /* fond global très clair */
+		--panel: #ffffff;       /* panneaux blancs */
+		--panel-2: #f0f0f5;     /* variante gris très pâle */
+		--text: #222222;        /* texte sombre pour contraste */
+		--muted: #666666;       /* texte secondaire gris */
+		--accent: #3366cc;      /* bleu plus vif pour titres */
+		--accent-2: #33cccc;    /* bleu turquoise clair */
+		--radius: 14px;
+		--shadow: 0 4px 12px rgba(0,0,0,0.1); /* ombre douce */
+	}
 
     body {
+		
       font-family: system-ui, sans-serif;
-      background: linear-gradient(180deg, var(--bg) 0%, #0b0e19 100%);
-      color: var(--text);
+      background: linear-gradient(180deg, var(--bg) 0%, #ffffff 100%);
+		color: var(--text);
       line-height: 1.6;
       margin: 0;
     }
@@ -45,7 +46,7 @@
     section {
       margin-top: 26px;
       padding: 20px;
-      background: #141833;
+       background: #ffffff; /* sections blanches */
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       opacity: 0;
@@ -90,7 +91,7 @@
 
     .card {
       padding: 16px;
-      background: #12152b;
+      background: #fdfdfd; /* cartes légèrement grisées */
       border-radius: 12px;
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -135,25 +136,36 @@
       <h2>👥 Les membres de l’équipe</h2>
       <div class="grid cols-2">
         <div class="card">
-          <img src="image/tigondra.jpg" alt="Photo de Timéo Gondran">
-          <h3>Timéo Gondran</h3>
-          <p class="muted">Développeur motivé, prêt à débugger jusqu’au bout de la nuit.</p>
-        </div>
-        <div class="card">
-          <img src="image/pdauga.jpg" alt="Photo de Pablo Dauga">
-          <h3>Pablo Dauga</h3>
-          <p class="muted">Créatif et logique, il apporte des idées et du code solide.</p>
-        </div>
-        <div class="card">
-          <img src="image/mboutte.jpg" alt="Photo de Matisse Boutte">
-          <h3>Matisse Boutte</h3>
-          <p class="muted">Toujours prêt à optimiser, améliorer et rendre le projet plus fluide.</p>
-        </div>
-        <div class="card">
-          <img src="image/ramaroud.jpg" alt="Photo de Rayan Maroudi">
-          <h3>Rayan Maroudi</h3>
-          <p class="muted">Passionné de développement, il veille à ce que tout fonctionne ensemble.</p>
-        </div>
+  <a href="team/tigondra.html">
+    <img src="image/tigondra.jpg" alt="Photo de Timéo Gondran">
+    <h3>Timéo Gondran</h3>
+  </a>
+  <p class="muted">Développeur motivé, prêt à débugger jusqu’au bout de la nuit.</p>
+</div>
+
+		<div class="card">
+		<a href="team/pdauga.html">
+			<img src="image/pdauga.jpg" alt="Photo de Pablo Dauga">
+			<h3>Pablo Dauga</h3>
+		</a>
+		<p class="muted">Créatif et logique, il apporte des idées et du code solide.</p>
+		</div>
+
+		<div class="card">
+		<a href="team/mboutte.html">
+			<img src="image/mboutte.jpg" alt="Photo de Matisse Boutte">
+			<h3>Matisse Boutte</h3>
+		</a>
+		<p class="muted">Toujours prêt à optimiser, améliorer et rendre le projet plus fluide.</p>
+		</div>
+
+		<div class="card">
+		<a href="team/ramaroud.html">
+			<img src="image/ramaroud.png" alt="Photo de Rayan Maroudi">
+			<h3>Rayan Maroudi</h3>
+		</a>
+		<p class="muted">Passionné de développement, il veille à ce que tout fonctionne ensemble.</p>
+		</div>
       </div>
       <p class="muted" style="margin-top:14px">
         Ensemble, nous mettons notre énergie, nos compétences et notre humour au service de ce projet ludique et engagé.
