@@ -1,220 +1,81 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NeoVim — Nuit de l’Info 2025</title>
-  <style>
-    :root {
-		--bg: #f9f9fb;          /* fond global très clair */
-		--panel: #ffffff;       /* panneaux blancs */
-		--panel-2: #f0f0f5;     /* variante gris très pâle */
-		--text: #222222;        /* texte sombre pour contraste */
-		--muted: #666666;       /* texte secondaire gris */
-		--accent: #3366cc;      /* bleu plus vif pour titres */
-		--accent-2: #33cccc;    /* bleu turquoise clair */
-		--radius: 14px;
-		--shadow: 0 4px 12px rgba(0,0,0,0.1); /* ombre douce */
-	}
-
-    body {
-		
-      font-family: system-ui, sans-serif;
-      background: linear-gradient(180deg, var(--bg) 0%, #ffffff 100%);
-		color: var(--text);
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    .wrap {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 32px 20px 60px;
-    }
-
-    header {
-      padding: 24px;
-      background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      text-align: center;
-      animation: fadeIn 1.5s ease;
-    }
-
-    h1, h2 { margin: 0; }
-
-    section {
-      margin-top: 26px;
-      padding: 20px;
-       background: #ffffff; /* sections blanches */
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 1s ease forwards;
-    }
-
-    section:nth-of-type(2) { animation-delay: 0.3s; }
-    section:nth-of-type(3) { animation-delay: 0.6s; }
-    section:nth-of-type(4) { animation-delay: 0.9s; }
-    section:nth-of-type(5) { animation-delay: 1.2s; }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    section h2 {
-      font-size: 22px;
-      margin-bottom: 12px;
-      color: var(--accent);
-      transition: color 0.3s ease;
-    }
-
-    section h2:hover {
-      color: var(--accent-2);
-    }
-
-    .grid {
-      display: grid;
-      gap: 14px;
-    }
-
-    @media (min-width: 720px) {
-      .grid.cols-2 { grid-template-columns: 1fr 1fr; }
-    }
-
-    .card {
-      padding: 16px;
-      background: #fdfdfd; /* cartes légèrement grisées */
-      border-radius: 12px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-    }
-
-    .card img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 12px;
-      margin-bottom: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      transition: transform 0.4s ease;
-    }
-
-    .card img:hover {
-      transform: scale(1.05);
-    }
-
-    .card h3 {
-      margin: 0 0 6px;
-      font-size: 18px;
-    }
-
-    .muted { color: var(--muted); }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <h1>🧑‍💻 Notre équipe — NeoVim</h1>
-      <p class="muted">Nous sommes NeoVim, une équipe composée de quatre étudiants passionnés, tous issus de l’école 42 Lyon.<br>
-      Notre objectif pour la Nuit de l’Info 2025 : coder, apprendre, créer… et surtout s’amuser !</p>
-    </header>
-
-    <section>
-      <h2>👥 Les membres de l’équipe</h2>
-      <div class="grid cols-2">
-        <div class="card">
-  <a href="team/tigondra.html">
-    <img src="image/tigondra.jpg" alt="Photo de Timéo Gondran">
-    <h3>Timéo Gondran</h3>
-  </a>
-  <p class="muted">Développeur motivé, prêt à débugger jusqu’au bout de la nuit.</p>
-</div>
-
-		<div class="card">
-		<a href="team/pdauga.html">
-			<img src="image/pdauga.jpg" alt="Photo de Pablo Dauga">
-			<h3>Pablo Dauga</h3>
-		</a>
-		<p class="muted">Créatif et logique, il apporte des idées et du code solide.</p>
-		</div>
-
-		<div class="card">
-		<a href="team/mboutte.html">
-			<img src="image/mboutte.jpg" alt="Photo de Matisse Boutte">
-			<h3>Matisse Boutté</h3>
-		</a>
-		<p class="muted">Toujours prêt à optimiser, améliorer et rendre le projet plus fluide.</p>
-		</div>
-
-		<div class="card">
-		<a href="team/ramaroud.html">
-			<img src="image/ramaroud.png" alt="Photo de Rayan Maroudi">
-			<h3>Rayan Maroudi</h3>
-		</a>
-		<p class="muted">Passionné de développement, il veille à ce que tout fonctionne ensemble.</p>
-		</div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Neovim</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <navbar class="top-nav">
+      <div class="logo">Village Numérique Résistant</div>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="team.html">Équipe</a>
+        <a id="show-intro-btn" href="#">Afficher l’intro</a>
+      </nav>
+    </navbar>
+    <div id="intro-overlay">
+      <div class="intro-panel">
+        <img src="assets/logo.png" alt="Logo Village Numérique Résistant" class="intro-logo">
+        <h1>Bienvenue au Village Numérique Résistant</h1>
+        <p>
+          Incarne Tux le pinguoin de Linux et découvre comment
+          lutter contre l’obsolescence programmée, promouvoir
+          le logiciel libre et construire un numérique plus
+          responsable.
+        </p>
+        <button id="intro-btn">Accéder au village</button>
       </div>
-      <p class="muted" style="margin-top:14px">
-        Ensemble, nous mettons notre énergie, nos compétences et notre humour au service de ce projet ludique et engagé.
-      </p>
-    </section>
+    </div>
+    <div id="game-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
+    <script src="js/StartScene.js"></script>
+    <script src="js/Level1Scene.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      const btn = document.getElementById('intro-btn');
+      const overlay = document.getElementById('intro-overlay');
+      const showIntroBtn = document.getElementById('show-intro-btn');
 
-    <section>
-      <h2>🎮 Notre projet — Pinguin vs Virus</h2>
-      <p>
-        Pour la Nuit de l’Info 2025, nous développons <strong>Pinguin vs Virus</strong>, un jeu de plateforme inspiré des classiques du genre.
-        Le joueur incarne un pingouin héroïque, bien décidé à défendre le numérique libre et durable.
-      </p>
-      <p>
-        À travers plusieurs niveaux remplis de virus, de malwares et d’obstacles numériques, notre héros devra progresser jusqu’à affronter
-        le boss final : <strong>Windowz</strong>, incarnation humoristique de la dépendance aux Big Tech et de l’obsolescence programmée.
-      </p>
-      <p class="muted">
-        Notre objectif est de proposer une expérience fun, engagée et accessible, tout en sensibilisant le public aux enjeux du numérique responsable
-        et à la démarche NIRD.
-      </p>
-    </section>
+      function showOverlay() {
+        overlay.style.display = 'flex';
+        setTimeout(() => {
+          overlay.style.opacity = '1';
+          overlay.style.pointerEvents = 'all';
+        }, 10);
+      }
 
-    <section>
-      <h2>👾 Les ennemis</h2>
-      <ul>
-        <li><strong>Les Virus :</strong> ils patrouillent ou avancent vers le joueur et représentent la première menace du jeu.</li>
-        <li><strong>Windowz :</strong> le boss final, plus imposant et plus dangereux, incarne la dernière épreuve de l’aventure.</li>
-      </ul>
-    </section>
+      function hideOverlay() {
+        overlay.style.opacity = '0';
+        overlay.style.pointerEvents = 'none';
+        setTimeout(() => {
+          overlay.style.display = 'none';
+        }, 400);
+      }
 
-    <section>
-      <h2>🌍 Les niveaux</h2>
-      <p>Le jeu propose trois environnements distincts, chacun avec sa propre ambiance :</p>
-      <ul>
-        <li><strong>La carte Automne :</strong> un décor naturel, orangé et calme… en apparence.</li>
-        <li><strong>La carte Usine :</strong> mécanique, métallique, remplie de dangers numériques.</li>
-        <li><strong>La carte Ville :</strong> un environnement urbain où le pingouin doit esquiver les menaces informatiques.</li>
-      </ul>
-      <p class="muted">À la fin du parcours, le joueur affronte Windowz, dans un combat final qui conclut l’aventure.</p>
-    </section>
+      document.addEventListener('DOMContentLoaded', () => {
+        const hasVisited = localStorage.getItem('hasVisitedVillage');
 
-	<section>
-      <h2>Le Snake</h2>
-      <ul>
-        <li>Une version emblematique du jeu du snake est disponible sur <a href="snake.html">cette page !</a></li>
-		<li>Le but est de manger un maximum de nourriture sans se mordre la queue ni sortir des limites du terrain.</li>
-		<li>Utilisez les flèches du clavier pour diriger le serpent.</li>
-      </ul>
-    </section>
-  </div>
-</body>
+        if (hasVisited === 'true') {
+          overlay.style.display = 'none';
+          overlay.style.opacity = '0';
+          overlay.style.pointerEvents = 'none';
+        } else {
+          showOverlay();
+        }
+      });
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        localStorage.setItem('hasVisitedVillage', 'true');
+        hideOverlay();
+      });
+
+      showIntroBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        showOverlay();
+      });
+    </script>
+  </body>
 </html>
